@@ -22,9 +22,26 @@ $(document).ready(() => {
       $(".menu").css("top", "0");
     else $(".menu").css("top", "-100%");
   });
+
+  consoleBG();
+
+  $(window).scroll(function () {
+    consoleBG();
+  });
+
 });
 
 let createGenrePage = (genre) => {
   localStorage.setItem("genreName", genre);
   document.location.href = "genre.html";
 };
+
+function consoleBG() {
+  if ($(window).scrollTop() == 0) {
+    $('.header-top').removeClass('header-top-fix');
+  } else {
+    $('.header-top').addClass('header-top-fix');
+  }
+}
+
+

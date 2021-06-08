@@ -24,9 +24,12 @@ body {
 
 .header {
   width: 100%;
-  z-index: 100;
 }
 .header-top {
+  position: fixed;
+  max-width: 1200px;
+  z-index: 100;
+  width: 100%;
   display: flex;
   padding: 10px 15px;
   justify-content: space-between;
@@ -37,6 +40,7 @@ body {
 
   border-top: 3px solid rgb(124, 124, 124);
   border-bottom: 3px solid rgb(124, 124, 124);
+  transition: all .3s;
 }
 
 .menu-link {
@@ -74,7 +78,7 @@ body {
 .header__slider {
   display: flex;
   cursor: pointer;
-  margin-top: 1.5rem;
+  margin-top: 10rem;
   min-width: 0;
   align-items: stretch;
   box-shadow: 0px 3px 10px #c71aa4;
@@ -95,7 +99,7 @@ body {
 }
 
 section {
-  margin-top: 2rem;
+  margin-top: 10rem;
 }
 
 .container-content .track-list {
@@ -274,6 +278,7 @@ section {
 } */
 .btn-wrapper {
   /* height: 3rem; */
+
   padding: 1rem;
   cursor: pointer;
   z-index: 1001;
@@ -314,4 +319,16 @@ section {
   transform: rotate(-45deg);
   top: 1rem;
   transition: all 0.3s;
+}
+
+.header-top-fix{
+  padding: 0;
+  left: 0;
+  top: -2px;
+  max-width: 100%;
+  /* justify-content: space-around; */
+}
+.header-top-fix .logo img{
+  width: 70px;
+  height: 70px;
 }
